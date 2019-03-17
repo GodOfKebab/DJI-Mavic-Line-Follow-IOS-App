@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y5h-KL-TjC">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FPV View Controller-->
+        <scene sceneID="h7h-rr-pPd">
+            <objects>
+                <viewController title="FPV View Controller" id="Y5h-KL-TjC" customClass="FPVViewController" customModule="FPVDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oFq-A1-eWo"/>
+                        <viewControllerLayoutGuide type="bottom" id="eiZ-M7-BsQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AFE-JX-zxr">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12H-eh-fWW">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fls-PK-hQ4">
+                                <rect key="frame" x="36" y="36" width="96" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="TakeOff/Land"/>
+                                <connections>
+                                    <action selector="onTouchTakeoffAndLand:" destination="Y5h-KL-TjC" eventType="touchUpInside" id="R6f-wh-0kh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uig-BA-87L">
+                                <rect key="frame" x="503" y="29" width="143" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Set Gimball To -90/0"/>
+                                <connections>
+                                    <action selector="OnTouchGimbal:" destination="Y5h-KL-TjC" eventType="touchUpInside" id="EFM-Qf-5zD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2V-3v-kWy">
+                                <rect key="frame" x="237" y="325" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Contoured"/>
+                                <connections>
+                                    <action selector="onTouchContouredView:" destination="Y5h-KL-TjC" eventType="touchUpInside" id="pg6-P7-YQ3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hga-0O-HuU">
+                                <rect key="frame" x="24" y="325" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GrayScale"/>
+                                <connections>
+                                    <action selector="onTouchGrayScaleView:" destination="Y5h-KL-TjC" eventType="touchUpInside" id="J2s-Xd-OVL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpQ-zy-cIT">
+                                <rect key="frame" x="119" y="325" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Thresholded"/>
+                                <connections>
+                                    <action selector="onTouchThresholdedView:" destination="Y5h-KL-TjC" eventType="touchUpInside" id="Yzu-r3-vv7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1J-FI-FkG">
+                                <rect key="frame" x="342" y="325" width="154" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="EnterVirtualStickMode"/>
+                                <connections>
+                                    <action selector="enterVirtualStickMode:" destination="Y5h-KL-TjC" eventType="touchUpInside" id="2oJ-XO-Oe8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMJ-XR-LXe">
+                                <rect key="frame" x="504" y="327" width="143" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ExitVirtualStickMode"/>
+                                <connections>
+                                    <action selector="exitVirtualStickMode:" destination="Y5h-KL-TjC" eventType="touchUpInside" id="xPC-x4-0PT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J1c-zF-EhE"/>
+                    <connections>
+                        <outlet property="fpvView" destination="12H-eh-fWW" id="tnv-WD-fqO"/>
+                        <outlet property="gimbalSetTo" destination="Uig-BA-87L" id="ah9-y1-T4t"/>
+                        <outlet property="takeoffAndLand" destination="Fls-PK-hQ4" id="q8S-Nf-8sc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spR-T1-rIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942.27886056971522" y="-248.80000000000001"/>
+        </scene>
+    </scenes>
+</document>
